@@ -26,3 +26,10 @@ jobs:
       run: curl -SsL https://downloads.gauge.org/stable | sh
     - name: Build with Maven
       run: mvn clean install gauge:execute -Dtags="smoke" -Dflags=--max-retries-count=3
+      
+    - name: Deploy report
+      uses: ./html-report/*
+      with:
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        remote_url: https://github.com/robisaveanu/robisaveanu.github.io.git
