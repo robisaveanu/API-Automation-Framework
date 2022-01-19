@@ -27,9 +27,13 @@ jobs:
     - name: Build with Maven
       run: mvn clean install gauge:execute -Dtags="smoke" -Dflags=--max-retries-count=3
       
-    - name: Deploy report
-      uses: ./html-report/*
+    - name: Push generated webpage to another repository
+      uses: nkoppel/push-files-to-another-repository@1.1.0
+      env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        remote_url: https://github.com/robisaveanu/robisaveanu.github.io.git
+          source-files: './reports/html-report/'
+          destination-username: 'robisaveanu'
+          destination-repository: 'robisaveanu.github.io'
+          destination-directory: './'
+          commit-email: 'robert_saveanu@outlook.com'
