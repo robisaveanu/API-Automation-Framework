@@ -32,7 +32,7 @@ jobs:
       env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-          source-files: './reports/html-report/'
+          source-files: './reports/html-report/*'
           destination-username: 'robisaveanu'
           destination-repository: 'robisaveanu.github.io'
           destination-directory: './'
