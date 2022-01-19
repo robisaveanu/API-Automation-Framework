@@ -25,4 +25,4 @@ jobs:
     - name: Install getgauge framework
       run: curl -SsL https://downloads.gauge.org/stable | sh
     - name: Build with Maven
-      run: mvn gauge:execute -Dtags="smoke" -Dflags=--max-retries-count=3
+      run: mvn clean install gauge:execute -Dtags="smoke" -Dflags=--max-retries-count=3
