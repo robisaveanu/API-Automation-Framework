@@ -1,5 +1,6 @@
 Specification Heading
 =====================
+tags: smoke
 
 This is an executable specification file. This file follows markdown syntax.
 Every heading in this file denotes a scenario. Every bulleted point denotes a step.
@@ -20,7 +21,6 @@ tags: single word
 
 Vowel counts in multiple word
 -----------------------------
-tags: smoke
 
 This is the second scenario in this specification
 
