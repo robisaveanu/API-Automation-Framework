@@ -1,11 +1,14 @@
 package org.example.steps;
 
+import com.thoughtworks.gauge.Gauge;
 import com.thoughtworks.gauge.Step;
 import com.thoughtworks.gauge.Table;
 import com.thoughtworks.gauge.TableRow;
 
 import java.util.HashSet;
 
+import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StepImplementation {
@@ -45,5 +48,15 @@ public class StepImplementation {
             }
         }
         return count;
+    }
+
+    @Step("Check contract for the planets endpoint")
+    public void getAllPlanets() {
+        Gauge.writeMessage("fokjgoedfjghoirmog rhkhpr kphjkrpykh poyrtkpjh ktyphrjkpothykjptoykjpotkjpktypojktypkj tkjpktuypjk typokjp oktjpktjpk pjtyk pkjypokytp kyjpotyk jpktyjpokjt");
+        given().
+                when().
+                get("/planets").
+                then().
+                body(matchesJsonSchemaInClasspath("schemas/planets_schema.json"));
     }
 }

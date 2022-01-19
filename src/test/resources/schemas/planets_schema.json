@@ -1,0 +1,152 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "count",
+    "next",
+    "previous",
+    "results"
+  ],
+  "properties": {
+    "count": {
+      "title": "Count",
+      "type": "integer",
+      "default": 0
+    },
+    "next": {
+      "title": "Next",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    },
+    "previous": {
+      "title": "Previous",
+      "type": "string",
+      "default": null
+    },
+    "results": {
+      "title": "Results",
+      "type": "array",
+      "default": [],
+      "items":{
+        "title": "Items",
+        "type": "object",
+        "required": [
+          "name",
+          "rotation_period",
+          "orbital_period",
+          "diameter",
+          "climate",
+          "gravity",
+          "terrain",
+          "surface_water",
+          "population",
+          "residents",
+          "films",
+          "created",
+          "edited",
+          "url"
+        ],
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "rotation_period": {
+            "title": "Rotation_period",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "orbital_period": {
+            "title": "Orbital_period",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "diameter": {
+            "title": "Diameter",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "climate": {
+            "title": "Climate",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "gravity": {
+            "title": "Gravity",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "terrain": {
+            "title": "Terrain",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "surface_water": {
+            "title": "Surface_water",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "population": {
+            "title": "Population",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "residents": {
+            "title": "Residents",
+            "type": "array",
+            "default": [],
+            "items":{
+              "title": "Items",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            }
+          },
+          "films": {
+            "title": "Films",
+            "type": "array",
+            "default": [],
+            "items":{
+              "title": "Items",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            }
+          },
+          "created": {
+            "title": "Created",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "edited": {
+            "title": "Edited",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "url": {
+            "title": "Url",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          }
+        }
+      }
+
+    }
+  }
+}

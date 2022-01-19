@@ -3,8 +3,8 @@ SWAPI Contract
 
 * Load API basics
 
-Vowel counts in single word
+SWAPI Contract
 ---------------------------
-tags: SWAPI
+tags: smoke
 
-* Check contract for "people"
+* Check contract for the planets endpoint
