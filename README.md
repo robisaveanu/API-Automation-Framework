@@ -1,5 +1,5 @@
 # API-Automation-Framework
-##General
+## General
 The purpose of this project is to demonstrate the testing of a simple API framework (https://swapi.dev/) using Java.
 
 Other technologies used:
@@ -10,7 +10,7 @@ Other technologies used:
 <img src="img/Rest-assured.jpg" width="150"/>
 <img src="img/lombok.jpeg" width="150"/>
 
-##Get started
+## Get started
 ### Pre-requisites for running locally
 
 - [Install Gauge](https://docs.gauge.org/getting_started/installing-gauge.html)
