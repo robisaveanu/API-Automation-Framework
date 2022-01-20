@@ -1,6 +1,6 @@
 Specification Heading
 =====================
-tags: muted
+tags: smoke
 
 This is an executable specification file. This file follows markdown syntax.
 Every heading in this file denotes a scenario. Every bulleted point denotes a step.
@@ -23,7 +23,7 @@ Vowel counts in multiple word
 * Almost all words have vowels
      |Word  |Vowel Count|
      |------|-----------|
-     |Gauge |3          |
+     |Gauge |8          |
      |Mingle|2          |
      |Snap  |1          |
      |GoCD  |1          |

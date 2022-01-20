@@ -23,7 +23,7 @@
     },
     "previous": {
       "title": "Previous",
-      "type": "string",
+      "type": "null",
       "default": null
     },
     "results": {
@@ -35,16 +35,18 @@
         "type": "object",
         "required": [
           "name",
-          "rotation_period",
-          "orbital_period",
-          "diameter",
-          "climate",
-          "gravity",
-          "terrain",
-          "surface_water",
-          "population",
-          "residents",
+          "height",
+          "mass",
+          "hair_color",
+          "skin_color",
+          "eye_color",
+          "birth_year",
+          "gender",
+          "homeworld",
           "films",
+          "species",
+          "vehicles",
+          "starships",
           "created",
           "edited",
           "url"
@@ -56,56 +58,56 @@
             "default": "",
             "pattern": "^.*$"
           },
-          "rotation_period": {
-            "title": "Rotation_period",
+          "height": {
+            "title": "Height",
             "type": "string",
             "default": "",
             "pattern": "^.*$"
           },
-          "orbital_period": {
-            "title": "Orbital_period",
+          "mass": {
+            "title": "Mass",
             "type": "string",
             "default": "",
             "pattern": "^.*$"
           },
-          "diameter": {
-            "title": "Diameter",
+          "hair_color": {
+            "title": "Hair_color",
             "type": "string",
             "default": "",
             "pattern": "^.*$"
           },
-          "climate": {
-            "title": "Climate",
+          "skin_color": {
+            "title": "Skin_color",
             "type": "string",
             "default": "",
             "pattern": "^.*$"
           },
-          "gravity": {
-            "title": "Gravity",
+          "eye_color": {
+            "title": "Eye_color",
             "type": "string",
             "default": "",
             "pattern": "^.*$"
           },
-          "terrain": {
-            "title": "Terrain",
+          "birth_year": {
+            "title": "Birth_year",
             "type": "string",
             "default": "",
             "pattern": "^.*$"
           },
-          "surface_water": {
-            "title": "Surface_water",
+          "gender": {
+            "title": "Gender",
             "type": "string",
             "default": "",
             "pattern": "^.*$"
           },
-          "population": {
-            "title": "Population",
+          "homeworld": {
+            "title": "Homeworld",
             "type": "string",
             "default": "",
             "pattern": "^.*$"
           },
-          "residents": {
-            "title": "Residents",
+          "films": {
+            "title": "Films",
             "type": "array",
             "default": [],
             "items":{
@@ -115,8 +117,24 @@
               "pattern": "^.*$"
             }
           },
-          "films": {
-            "title": "Films",
+          "species": {
+            "title": "Species",
+            "type": "array",
+            "default": []
+          },
+          "vehicles": {
+            "title": "Vehicles",
+            "type": "array",
+            "default": [],
+            "items":{
+              "title": "Items",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            }
+          },
+          "starships": {
+            "title": "Starships",
             "type": "array",
             "default": [],
             "items":{

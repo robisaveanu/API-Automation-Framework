@@ -1,10 +1,10 @@
 package org.example.steps;
 
-import com.thoughtworks.gauge.Gauge;
-import com.thoughtworks.gauge.Step;
-import com.thoughtworks.gauge.Table;
-import com.thoughtworks.gauge.TableRow;
+import com.thoughtworks.gauge.*;
+import lombok.SneakyThrows;
+import org.example.exceptions.NoStackTraceException;
 
+import java.net.URL;
 import java.util.HashSet;
 
 import static io.restassured.RestAssured.given;
@@ -50,13 +50,24 @@ public class StepImplementation {
         return count;
     }
 
-    @Step("Check contract for the planets endpoint")
-    public void getAllPlanets() {
-        Gauge.writeMessage("fokjgoedfjghoirmog rhkhpr kphjkrpykh poyrtkpjh ktyphrjkpothykjptoykjpotkjpktypojktypkj tkjpktuypjk typokjp oktjpktjpk pjtyk pkjypokytp kyjpotyk jpktyjpokjt");
-        given().
-                when().
-                get("/planets").
-                then().
-                body(matchesJsonSchemaInClasspath("schemas/planets_schema.json"));
+    @Step("Check contract for the <object> endpoint")
+    @ContinueOnFailure
+    @SneakyThrows
+    public void checkContract(String object) {
+        URL schema = getClass().getResource("/schemas/" + object + "_schema.json");
+        if (schema==null) {
+            throw new NoStackTraceException("There is no available schema for the endpoint provided.");
+        }
+        try {
+            given().
+                    when().
+                    get("/" + object).
+                    then().
+                    body(matchesJsonSchemaInClasspath("schemas/" + object + "_schema.json"));
+        }
+        catch (AssertionError e) {
+            Gauge.writeMessage("Checking the response against the schema failed.");
+            throw e;
+        }
     }
 }
