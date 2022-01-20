@@ -15,26 +15,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 11
-      uses: actions/setup-java@v2
-      with:
-        java-version: '11'
-        distribution: 'temurin'
-        cache: maven
-        
-    - name: Install getgauge framework
-      run: curl -SsL https://downloads.gauge.org/stable | sh
-      
-    - name: Build with Maven
-      run: mvn clean install gauge:execute -Dtags="smoke" -Dflags=--max-retries-count=3
-      continue-on-error: true
-      
-    - name: Push generated webpage to another repository
-      uses: nkoppel/push-files-to-another-repository@v1.1.0
-      env:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Install getgauge framework
+        run: curl -SsL https://downloads.gauge.org/stable | sh
+
+      - name: Build with Maven
+        run: mvn clean install gauge:execute -Dtags="smoke" -Dflags=--max-retries-count=3
+        continue-on-error: true
+
+      - name: Push generated webpage to another repository
+        uses: nkoppel/push-files-to-another-repository@v1.1.0
+        env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      with:
+        with:
           source-files: './reports/html-report/fonts ./reports/html-report/images ./reports/html-report/js ./reports/html-report/specs ./reports/html-report/index.html'
           destination-username: 'robisaveanu'
           destination-repository: 'robisaveanu.github.io'

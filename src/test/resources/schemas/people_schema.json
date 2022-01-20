@@ -30,7 +30,7 @@
       "title": "Results",
       "type": "array",
       "default": [],
-      "items":{
+      "items": {
         "title": "Items",
         "type": "object",
         "required": [
@@ -110,7 +110,7 @@
             "title": "Films",
             "type": "array",
             "default": [],
-            "items":{
+            "items": {
               "title": "Items",
               "type": "string",
               "default": "",
@@ -126,7 +126,7 @@
             "title": "Vehicles",
             "type": "array",
             "default": [],
-            "items":{
+            "items": {
               "title": "Items",
               "type": "string",
               "default": "",
@@ -137,7 +137,7 @@
             "title": "Starships",
             "type": "array",
             "default": [],
-            "items":{
+            "items": {
               "title": "Items",
               "type": "string",
               "default": "",

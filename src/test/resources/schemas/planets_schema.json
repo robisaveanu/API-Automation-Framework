@@ -30,7 +30,7 @@
       "title": "Results",
       "type": "array",
       "default": [],
-      "items":{
+      "items": {
         "title": "Items",
         "type": "object",
         "required": [
@@ -108,7 +108,7 @@
             "title": "Residents",
             "type": "array",
             "default": [],
-            "items":{
+            "items": {
               "title": "Items",
               "type": "string",
               "default": "",
@@ -119,7 +119,7 @@
             "title": "Films",
             "type": "array",
             "default": [],
-            "items":{
+            "items": {
               "title": "Items",
               "type": "string",
               "default": "",
